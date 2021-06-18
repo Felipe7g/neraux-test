@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/resources/css/home.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+
+    <style>
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background: white;
+        min-width: 210px;
+      }
+      .gallery img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .swiper-button-prev:after,
+      .swiper-container-rtl .swiper-button-next:after {
+        content: "prev";
+        background: #ff5100;
+        padding: 10px 15px;
+        border-radius: 50%;
+        text-align: center;
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        left: 200px;
+        position: absolute;
+      }
+
+      .swiper-button-next:after,
+      .swiper-container-rtl .swiper-button-prev:after {
+        content: "next";
+        background: #ff5100;
+        padding: 10px 15px;
+        border-radius: 50%;
+        text-align: center;
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        right: 200px;
+        position: absolute;
+      }
+
+      .swiper-container-horizontal > .swiper-pagination-bullets,
+      .swiper-pagination-custom,
+      .swiper-pagination-fraction {
+        bottom: 10px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+      }
+
+      .swiper-container-horizontal
+        > .swiper-pagination-bullets
+        .swiper-pagination-bullet {
+        margin: 0 4px;
+        background: #ff5100;
+      }
+
+      .swiper-button-prev.margin-right:after, 
+      .swiper-container-rtl 
+      .swiper-button-next:after {
+       content: "prev";
+       background: #ff5100;
+       padding: 10px 15px;
+       border-radius: 50%;
+       text-align: center;
+       color: white;
+       font-size: 15px;
+       font-weight: 700;
+       left: 5px;
+       position: absolute;
+    }
+
+      .swiper-button-next.margin-left:after,
+      .swiper-container-rtl .swiper-button-prev:after {
+        content: "next";
+        background: #ff5100;
+        padding: 10px 15px;
+        border-radius: 50%;
+        text-align: center;
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        right: 5px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <section class="container-promo">
+        <div class="promo-text border-plus">
+          <img src="/resources/img/icons/plane.svg" alt="plane-icon" />
+          Frete grátis a partir de R$ 169,90
+        </div>
+        <div class="promo-text">
+          <img src="/resources/img/icons/gift-icon.svg" alt="gift-icon" />
+          Ganhe uma bandana a partir de R$ 259,00
+        </div>
+      </section>
+
+      <section class="container-services">
+        <div class="information-contact">
+          <span class="promo-text" style="margin-right: -20%">
+            <img src="/resources/img/icons/location.svg" alt="gift-icon" />
+            Nossas lojas
+          </span>
+
+          <span class="promo-text">
+            <img src="/resources/img/icons/phone.svg" alt="gift-icon" />
+            Atendimento ao cliente
+          </span>
+        </div>
+
+        <div class="user-options">
+          <div class="box-off-price">
+            <strong>%</strong> Ganhe <strong>10% off</strong> na primeira compra
+          </div>
+
+          <div class="user-login">
+            <img
+              src="/resources/img/icons/user-login.svg"
+              alt="Login de para clientes"
+            />
+          </div>
+
+          <div class="user-bag-market">
+            <img
+              src="/resources/img/icons/bag-market.svg"
+              alt="Carrinho de compras"
+            />
+            <span class="count-buys">2</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-menu">
+        <div class="logo-images">
+          <img src="/resources/img/svg/logo-pet.svg" alt="logo pet" />
+          <img src="/resources/img/svg/scooby.svg" alt="Scooby Doo" />
+        </div>
+
+        <div class="menu-links">
+          <a href="#" class="option-1">Cachorros</a>
+          <a href="#" class="option-2">Gatos</a>
+          <a href="#" class="option-3">Coleções</a>
+          <a href="#" class="option-4">Outlet</a>
+          <a href="#" class="option-5">Lookbook</a>
+        </div>
+
+        <div class="search">
+          <img src="/resources/img/svg/search.svg" alt="Buscar" />
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="banner">
+        <div class="sub-menu" style="display: none;">
+           <div class="sub-menu-top">
+             <div class="sub-menu-item">
+                <strong>Peitorais</strong>
+
+                <a href="#">Tradicional</a>
+                <a href="#">H</a>
+                <a href="#">Antipuxão</a>
+                <a href="#">Air</a>
+
+                <strong style="margin-top: 20%;">Coleiras</strong>
+                <strong>Tags de identificação</strong>
+
+             </div>
+
+             <div class="sub-menu-item">
+              <strong>Guias para coleira</strong>
+
+              <a href="#">Tradicional</a>
+                <a href="#">Dupla</a>
+                <a href="#">Longa</a>
+                <a href="#">Unificada</a>
+
+                <strong style="margin-top: 20%;">Coleiras</strong>
+                <strong>Tags de identificação</strong>
+            </div>
+
+            <div class="sub-menu-item">
+              <strong>Roupinhas</strong>
+
+                <a href="#">Moletons</a>
+                <a href="#">Bandanas</a>
+                <a href="#">Gravatas | Laços</a>
+             
+
+                <strong style="margin-top: 20%;">Coleiras</strong>
+                <strong>Tags de identificação</strong>
+            </div>
+
+           </div>
+
+           <div class="sub-menu-bottom">
+
+          </div>
+        </div>
+        <div class="notification-banner">
+          <p>
+            Indique amigos para conhecer a Logoipsum.
+            <strong>Dê 15% OFF e ganhe R$ 25. Comece agora</strong>
+          </p>
+        </div>
+
+        <div class="text-banner">
+          <h3>
+            NOVA <br />
+            COLEÇÃO
+          </h3>
+
+          <h1>DC Comics + Logoipsum</h1>
+
+          <div class="buttons-banner">
+            <button type="button">PARA CACHORROS</button>
+            <button type="button">PARA GATOS</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="products-one">
+        <div class="side-left-product">
+          <img src="/resources/img/svg/product-1.svg" alt="Peitorais" />
+
+          <a href="#">PEITORAIS</a>
+        </div>
+
+        <div class="side-right-product">
+          <div class="product-item">
+            <img src="/resources/img/svg/product-2.svg" alt="Roupinhas" />
+
+            <a href="#">ROUPINHAS</a>
+          </div>
+
+          <div class="product-bottom-side">
+            <div class="product-item">
+              <img src="/resources/img/svg/product-3.svg" alt="Roupinhas" />
+
+              <a href="#">COLEIRAS</a>
+            </div>
+
+            <div class="product-item">
+              <img src="/resources/img/svg/product-4.svg" alt="Roupinhas" />
+
+              <a href="#">GUIAS</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container-slider-products">
+        <!-- Swiper -->
+        <div class="swiper-container mySwiper" style="padding-bottom: 60px;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <section class="present-product">
+                <div class="header-box">
+                  <div class="icon-animal">
+                    <img
+                      src="/resources/img/icons/cat-icon.svg"
+                      alt="Para gatos"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="/resources/img/svg/product-5.svg"
+                  alt="Bandana Energy"
+                />
+              </section>
+
+              <div class="product-details">
+                <h1>Bandana para cachorros e gatos Energy</h1>
+
+                <p>R$ 33,90</p>
+                <span>até 2x de 16,58 sem juros</span>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <section class="present-product">
+                <div class="header-box">
+                  <div class="icon-animal">
+                    <img
+                      src="/resources/img/icons/cat-icon.svg"
+                      alt="Para gatos"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="/resources/img/svg/product-5.svg"
+                  alt="Bandana Energy"
+                />
+              </section>
+
+              <div class="product-details">
+                <h1>Bandana para cachorros e gatos Energy</h1>
+
+                <p>R$ 33,90</p>
+                <span>até 2x de 16,58 sem juros</span>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <section class="present-product">
+                <div class="header-box">
+                  <div class="icon-animal">
+                    <img
+                      src="/resources/img/icons/dog-icon.svg"
+                      alt="Para gatos"
+                    />
+                  </div>
+
+                  <div class="off-price">-15%</div>
+                </div>
+                <img
+                  src="/resources/img/svg/product-6.svg"
+                  alt="Colera Scooby-Doo"
+                />
+              </section>
+
+              <div class="product-details">
+                <h1>Coleira coleção Scooby-Doo</h1>
+
+                <span>R$ 149,90 de desconto</span>
+                <p>R$ 33,90</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <section class="present-product">
+                <div class="header-box">
+                  <div class="icon-animal">
+                    <img
+                      src="/resources/img/icons/dog-icon.svg"
+                      alt="Para gatos"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="/resources/img/svg/product-7.svg"
+                  alt="Bandana Energy"
+                />
+              </section>
+
+              <div class="product-details">
+                <h1>Kit Flamengo para cachorro e gato</h1>
+
+                <p>R$ 145,90</p>
+                <span>até 2x de R$ 73,00 sem juros</span>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <section class="present-product">
+                <div class="header-box">
+                  <div class="icon-animal">
+                    <img
+                      src="/resources/img/icons/dog-icon.svg"
+                      alt="Para cachorros"
+                    />
+                  </div>
+                  <div class="icon-animal gap-icon">
+                    <img
+                      src="/resources/img/icons/cat-icon.svg"
+                      alt="Para gatos"
+                    />
+                  </div>
+                  <div class="off-price">-15%</div>
+                </div>
+                <img
+                  src="/resources/img/svg/product-8.svg"
+                  alt="Gravata pra cachorro"
+                />
+              </section>
+
+              <div class="product-details">
+                <h1>Gravata para cachorros estampa floral</h1>
+
+                <span>R$ 29,90 de desconto</span>
+                <p>R$ 22,00</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <section class="present-product">
+                <div class="header-box">
+                  <div class="icon-animal">
+                    <img
+                      src="/resources/img/icons/cat-icon.svg"
+                      alt="Para gatos"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="/resources/img/svg/product-5.svg"
+                  alt="Bandana Energy"
+                />
+              </section>
+
+              <div class="product-details">
+                <h1>Bandana para cachorros e gatos Energy</h1>
+
+                <p>R$ 33,90</p>
+                <span>até 2x de 16,58 sem juros</span>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <section class="present-product">
+                <div class="header-box">
+                  <div class="icon-animal">
+                    <img
+                      src="/resources/img/icons/cat-icon.svg"
+                      alt="Para gatos"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="/resources/img/svg/product-5.svg"
+                  alt="Bandana Energy"
+                />
+              </section>
+
+              <div class="product-details">
+                <h1>Bandana para cachorros e gatos Energy</h1>
+
+                <p>R$ 33,90</p>
+                <span>até 2x de 16,58 sem juros</span>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <section class="present-product">
+                <div class="header-box">
+                  <div class="icon-animal">
+                    <img
+                      src="/resources/img/icons/cat-icon.svg"
+                      alt="Para gatos"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="/resources/img/svg/product-5.svg"
+                  alt="Bandana Energy"
+                />
+              </section>
+
+              <div class="product-details">
+                <h1>Bandana para cachorros e gatos Energy</h1>
+
+                <p>R$ 33,90</p>
+                <span>até 2x de 16,58 sem juros</span>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <section class="present-product">
+                <div class="header-box">
+                  <div class="icon-animal">
+                    <img
+                      src="/resources/img/icons/cat-icon.svg"
+                      alt="Para gatos"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="/resources/img/svg/product-5.svg"
+                  alt="Bandana Energy"
+                />
+              </section>
+
+              <div class="product-details">
+                <h1>Bandana para cachorros e gatos Energy</h1>
+
+                <p>R$ 33,90</p>
+                <span>até 2x de 16,58 sem juros</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      </div>
+
+
+      <div class="container-sub-banner">
+          <section class="sub-banner">
+            <div class="text-banner">
+              <h3>COLEÇÃO</h3>
+    
+              <h1>Scooby-Doo</h1>
+    
+              <div class="buttons-banner">
+                <button type="button">PARA CACHORROS</button>
+                <button type="button">PARA GATOS</button>
+              </div>
+          </section>
+
+          <section class="container-slider-products">
+              <!-- Swiper -->
+        <div class="swiper-container mySwiper" style="padding-bottom: 60px;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <section class="present-product">
+                <div class="header-box">
+                  <div class="icon-animal">
+                    <img
+                      src="/resources/img/icons/cat-icon.svg"
+                      alt="Para gatos"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="/resources/img/svg/product-5.svg"
+                  alt="Bandana Energy"
+                />
+              </section>
+
+              <div class="product-details">
+                <h1>Bandana para cachorros e gatos Energy</h1>
+
+                <p>R$ 33,90</p>
+                <span>até 2x de 16,58 sem juros</span>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <section class="present-product">
+                <div class="header-box">
+                  <div class="icon-animal">
+                    <img
+                      src="/resources/img/icons/cat-icon.svg"
+                      alt="Para gatos"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="/resources/img/svg/product-5.svg"
+                  alt="Bandana Energy"
+                />
+              </section>
+
+              <div class="product-details">
+                <h1>Bandana para cachorros e gatos Energy</h1>
+
+                <p>R$ 33,90</p>
+                <span>até 2x de 16,58 sem juros</span>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <section class="present-product">
+                <div class="header-box">
+                  <div class="icon-animal">
+                    <img
+                      src="/resources/img/icons/dog-icon.svg"
+                      alt="Para gatos"
+                    />
+                  </div>
+
+                  <div class="off-price">-15%</div>
+                </div>
+                <img
+                  src="/resources/img/svg/product-6.svg"
+                  alt="Colera Scooby-Doo"
+                />
+              </section>
+
+              <div class="product-details">
+                <h1>Coleira coleção Scooby-Doo</h1>
+
+                <span>R$ 149,90 de desconto</span>
+                <p>R$ 33,90</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <section class="present-product">
+                <div class="header-box">
+                  <div class="icon-animal">
+                    <img
+                      src="/resources/img/icons/dog-icon.svg"
+                      alt="Para gatos"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="/resources/img/svg/product-7.svg"
+                  alt="Bandana Energy"
+                />
+              </section>
+
+              <div class="product-details">
+                <h1>Kit Flamengo para cachorro e gato</h1>
+
+                <p>R$ 145,90</p>
+                <span>até 2x de R$ 73,00 sem juros</span>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <section class="present-product">
+                <div class="header-box">
+                  <div class="icon-animal">
+                    <img
+                      src="/resources/img/icons/dog-icon.svg"
+                      alt="Para cachorros"
+                    />
+                  </div>
+                  <div class="icon-animal gap-icon">
+                    <img
+                      src="/resources/img/icons/cat-icon.svg"
+                      alt="Para gatos"
+                    />
+                  </div>
+                  <div class="off-price">-15%</div>
+                </div>
+                <img
+                  src="/resources/img/svg/product-8.svg"
+                  alt="Gravata pra cachorro"
+                />
+              </section>
+
+              <div class="product-details">
+                <h1>Gravata para cachorros estampa floral</h1>
+
+                <span>R$ 29,90 de desconto</span>
+                <p>R$ 22,00</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <section class="present-product">
+                <div class="header-box">
+                  <div class="icon-animal">
+                    <img
+                      src="/resources/img/icons/cat-icon.svg"
+                      alt="Para gatos"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="/resources/img/svg/product-5.svg"
+                  alt="Bandana Energy"
+                />
+              </section>
+
+              <div class="product-details">
+                <h1>Bandana para cachorros e gatos Energy</h1>
+
+                <p>R$ 33,90</p>
+                <span>até 2x de 16,58 sem juros</span>
+              </div>
+            </div>
+
+            
+          </div>
+          <div class="swiper-button-next margin-left"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+          </section>
+      </div>
+
+      <div class="container-sub-banner">
+        <section class="sub-banner-1">
+          <div class="text-banner">
+            <h3>COLEÇÃO</h3>
+  
+            <h1>Scooby-Doo</h1>
+  
+            <div class="buttons-banner">
+              <button type="button">PARA CACHORROS</button>
+              <button type="button">PARA GATOS</button>
+            </div>
+        </section>
+
+        <section class="container-slider-products">
+            <!-- Swiper -->
+      <div class="swiper-container mySwiper" style="padding-bottom: 60px;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <section class="present-product">
+              <div class="header-box">
+                <div class="icon-animal">
+                  <img
+                    src="/resources/img/icons/cat-icon.svg"
+                    alt="Para gatos"
+                  />
+                </div>
+              </div>
+              <img
+                src="/resources/img/svg/product-5.svg"
+                alt="Bandana Energy"
+              />
+            </section>
+
+            <div class="product-details">
+              <h1>Bandana para cachorros e gatos Energy</h1>
+
+              <p>R$ 33,90</p>
+              <span>até 2x de 16,58 sem juros</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <section class="present-product">
+              <div class="header-box">
+                <div class="icon-animal">
+                  <img
+                    src="/resources/img/icons/cat-icon.svg"
+                    alt="Para gatos"
+                  />
+                </div>
+              </div>
+              <img
+                src="/resources/img/svg/product-5.svg"
+                alt="Bandana Energy"
+              />
+            </section>
+
+            <div class="product-details">
+              <h1>Bandana para cachorros e gatos Energy</h1>
+
+              <p>R$ 33,90</p>
+              <span>até 2x de 16,58 sem juros</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <section class="present-product">
+              <div class="header-box">
+                <div class="icon-animal">
+                  <img
+                    src="/resources/img/icons/dog-icon.svg"
+                    alt="Para gatos"
+                  />
+                </div>
+
+                <div class="off-price">-15%</div>
+              </div>
+              <img
+                src="/resources/img/svg/product-6.svg"
+                alt="Colera Scooby-Doo"
+              />
+            </section>
+
+            <div class="product-details">
+              <h1>Coleira coleção Scooby-Doo</h1>
+
+              <span>R$ 149,90 de desconto</span>
+              <p>R$ 33,90</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <section class="present-product">
+              <div class="header-box">
+                <div class="icon-animal">
+                  <img
+                    src="/resources/img/icons/dog-icon.svg"
+                    alt="Para gatos"
+                  />
+                </div>
+              </div>
+              <img
+                src="/resources/img/svg/product-7.svg"
+                alt="Bandana Energy"
+              />
+            </section>
+
+            <div class="product-details">
+              <h1>Kit Flamengo para cachorro e gato</h1>
+
+              <p>R$ 145,90</p>
+              <span>até 2x de R$ 73,00 sem juros</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <section class="present-product">
+              <div class="header-box">
+                <div class="icon-animal">
+                  <img
+                    src="/resources/img/icons/dog-icon.svg"
+                    alt="Para cachorros"
+                  />
+                </div>
+                <div class="icon-animal gap-icon">
+                  <img
+                    src="/resources/img/icons/cat-icon.svg"
+                    alt="Para gatos"
+                  />
+                </div>
+                <div class="off-price">-15%</div>
+              </div>
+              <img
+                src="/resources/img/svg/product-8.svg"
+                alt="Gravata pra cachorro"
+              />
+            </section>
+
+            <div class="product-details">
+              <h1>Gravata para cachorros estampa floral</h1>
+
+              <span>R$ 29,90 de desconto</span>
+              <p>R$ 22,00</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <section class="present-product">
+              <div class="header-box">
+                <div class="icon-animal">
+                  <img
+                    src="/resources/img/icons/cat-icon.svg"
+                    alt="Para gatos"
+                  />
+                </div>
+              </div>
+              <img
+                src="/resources/img/svg/product-5.svg"
+                alt="Bandana Energy"
+              />
+            </section>
+
+            <div class="product-details">
+              <h1>Bandana para cachorros e gatos Energy</h1>
+
+              <p>R$ 33,90</p>
+              <span>até 2x de 16,58 sem juros</span>
+            </div>
+          </div>
+
+          
+        </div>
+        <div class="swiper-button-next margin-left"></div>
+        <div class="swiper-button-prev margin-right"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+        </section>
+    </div>
+
+    <div class="container-pets">
+        <section class="section-dog">
+            <div class="dog-present">
+              <img src="/resources/img/svg/banner-3.svg" alt="Para cachorros">
+
+              <div class="label-dog">
+                <h2>Cachorros</h2>
+
+                <a href="#">VER TUDO</a>
+              </div>
+              
+            </div>
+        </section>
+
+        <section class="section-cat">
+          <div class="cat-present">
+            <img src="/resources/img/svg/banner-4.svg" alt="Para cachorros">
+
+            <div class="label-dog">
+              <h2>Cachorros</h2>
+
+              <a href="#">VER TUDO</a>
+            </div>
+            
+          </div>
+        </section>
+    </div>
+
+    <div class="container-gallery">
+      <section class="wrapper">
+        <h2>Olha a gente aqui também</h2> 
+        <img src="/resources/img/icons/instagran.svg" alt="Instagran">
+      </section>
+
+
+      <div class="swiper-container mySwiper" style="padding-bottom: 60px;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide gallery">
+            <section class="present-product ">
+              
+              <img
+                src="/resources/img/svg/gallery-1.svg"
+                alt="Foto 1"
+              />
+            </section>
+
+            
+          </div>
+
+          <div class="swiper-slide gallery">
+            <section class="present-product">
+              
+              <img
+                src="/resources/img/svg/gallery-2.svg"
+                alt="foto 2"
+              />
+            </section>
+
+            
+          </div>
+
+          <div class="swiper-slide gallery">
+            <section class="present-product">
+              
+              <img
+                src="/resources/img/svg/gallery-3.svg"
+                alt="Foto 3"
+              />
+            </section>
+
+            
+          </div>
+
+          <div class="swiper-slide gallery">
+            <section class="present-product">
+              
+              <img
+                src="/resources/img/svg/gallery-4.svg"
+                alt="Foto 4"
+              />
+            </section>
+
+          
+          </div>
+
+          <div class="swiper-slide gallery">
+            <section class="present-product">
+              
+              <img
+                src="/resources/img/svg/gallery-5.svg"
+                alt="Foto 5"
+              />
+            </section>
+
+            
+          </div>
+
+          <div class="swiper-slide gallery">
+            <section class="present-product">
+            
+              <img
+                src="/resources/img/svg/gallery-6.svg"
+                alt="Bandana Energy"
+              />
+            </section>
+
+            
+          </div>
+
+          
+
+  
+          
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+        
+    </div>
+
+    <div class="container-sub-banner-1">
+
+      <div class="left-side-sub-banner">   
+
+          <section  class="group-images">
+           <img src="/resources/img/svg/img-background-small.svg">
+           <img src="/resources/img/svg/img-background.svg">
+           <img src="/resources/img/svg/img-background-small.svg">
+          </section>
+
+          <div class="box-text-main">
+            <h2>Quer revender nossos produtos em sua loja?</h2>
+            <p>
+            Somos a empresa oficial dos personagens da DC Comics, 
+            Warner Bros e Flamengo. Com fabricação nacional, material 
+            premium e estampas modernas, a Logoipsum® possui o portfólio 
+            ideal para a sua loja e o melhor custo-benefício para você agradar 
+            qualquer cliente pet.</p>
+
+            <div class="buttons-sub-banner">
+                <button type="button">SEJA UM REVENDEDOR</button>
+                <button type="button">SEJA UM FRANQUEADO</button>
+            </div>
+         </div>
+
+        
+
+      </div>
+
+      <div class="right-side-sub-banner">
+          <img src="/resources/img/svg/banner-5.svg">
+      </div>
+      
+        
+    </div>
+
+    
+      
+    </main>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 6,
+        spaceBetween: 20,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script src="/resources/js/home.js"></script>
+  </body>
+</html>
